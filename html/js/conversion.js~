@@ -1,0 +1,61 @@
+$.fn.convertLength = function(len, unit) {
+	
+	var base;
+	switch(unit) {
+		case 'ang':
+			base = len * 1e-10;
+			break;
+		case 'nm':
+			base = len * 1e-9;
+			break;
+		case 'um':
+			base = len * 1e-6;
+			break;
+		case 'mm':
+			base = len * 1e-3;
+			break;
+		case 'cm':
+			base = len * 1e-2;
+			break;
+		case 'm':
+			base = len;
+			break;
+		case 'km':
+			base = len * 1e3;
+			break;
+		case 'micron':
+			base = len * 1e-6;
+			break;
+		case 'mil':
+			base = len * 2.54e-5;
+			break;
+		case 'in':
+			base = len * 0.0254;
+			break;
+		case 'ft':
+			base = len * 0.3048;
+			break;
+		case 'yd':
+			base = len * 0.9144;
+			break;
+		case 'mi':
+			base = len * 1609.344;
+			break;
+	}
+	
+	$("form#convLength input#ang").val( (base/1e-10).toPrecision($("input#precision").val()) );
+	$("form#convLength input#nm").val( base/1e-9 );
+	$("form#convLength input#um").val( base/1e-6 );
+	$("form#convLength input#mm").val( base/1e-3 );
+	$("form#convLength input#cm").val( base/1e-2 );
+	$("form#convLength input#m").val( base );
+	$("form#convLength input#km").val( base/1e3 );
+	$("form#convLength input#micron").val( base/1e-6 );
+	$("form#convLength input#mil").val( base/2.54e-5 );
+	$("form#convLength input#in").val( base/0.0254 );
+	$("form#convLength input#ft").val( base/0.3048 );
+	$("form#convLength input#yd").val( base/0.9144 );
+	$("form#convLength input#mi").val( base/1609.344 );
+	
+	return base;
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html> 
+ 
+<html> 
+<head> 
+	<title>The New Maker's Web Reference</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.calculator.js"></script>
+	<script type="text/javascript" src="js/conversion.js"></script>
+	
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/font-stack.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+</head> 
+ 
+<body> 
+<header id="title"><h1>The <em>NEW</em> Maker's <s>Desk</s>Web Reference</h1></header>
+<section id="calc">
+	<input type="text" id="imageCalc" value="calc -->">
+	<br />
+	<input type="text" title="Precision/Sig Figs" id="precision" name="precision" value="3" /><img src="img/caliper.png" alt="calipers" title="Precision/Sig Figs" style="margin-right: 7px;"/>
+</section>
+<div class="clear"></div>
+<div id="content-top"></div>
+<nav id="mainMenu">
+	<ul id="tabs"> 
+		<li><a name="conversion" href="#1" class="active">Unit Conversion</a></li>
+		<li><a name="geometry" href="#2">Geometry/Trig</a></li>
+		<li><a name="electronics" href="#3">Electronics</a></li>
+		<li><a name="ham" href="#4">Ham Radio</a></li>
+		<li><a name="shop" href="#5">Shop Tools</a></li>
+	<!-- #tabs -->
+	</ul>
+<!-- #menu -->
+</nav>
+<div class="clear"></div>
+<div id="content">
+	<div id="subMenuBG"></div>
+	<section id="conversion">
+		<nav class="subMenu">
+			<ul>
+				<li><a name="length" class="active">Length</a></li>
+				<li><a name="mass">Mass/Weight</a></li>
+				<li><a name="volume">Volume</a></li>
+			</ul>
+		</nav>
+		<div class="info">
+			<section id="length">
+				<form id="convLength">
+					<div class="formTable">
+						<table>
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>
+							<tbody>
+								<tr>
+										<td><input id="ang" name="ang" type="text" /></td>
+										<td><strong>&Aring;</strong> &aring;ngstrom</td>
+										
+										<td><input id="micron" name="micron" type="text" /></td>
+										<td><strong>&micro;</strong> micron</td>
+								</tr>
+								<tr>
+										<td><input id="nm" name="nm" type="text" /></td>
+										<td><strong>nm</strong> nanometer</td>
+										
+										<td><input id="mil" name="mil" type="text" /></td>
+										<td><strong>mil</strong> mil/thou</td>
+								</tr>
+								<tr>
+										<td><input id="um" name="um" type="text" /></td>
+										<td><strong>&micro;m</strong> micrometer</td>
+										
+										<td><input id="in" name="in" type="text" /></td>
+										<td><strong>in</strong> inch</td>
+								</tr>
+								<tr>
+										<td><input id="mm" name="mm" type="text" /></td>
+										<td><strong>mm</strong> millimeter</td>
+										
+										<td><input id="ft" name="ft" type="text" /></td>
+										<td><strong>ft</strong> foot</td>
+								</tr>
+								<tr>
+										<td><input id="cm" name="cm" type="text" /></td>
+										<td><strong>cm</strong> centimeter</td>
+										
+										<td><input id="yd" name="yd" type="text" /></td>
+										<td><strong>yd</strong> yard</td>
+								</tr>
+								<tr>
+										<td><input id="m" name="m" type="text" /></td>
+										<td><strong>m</strong> meter</td>
+										
+										<td><input id="mi" name="mi" type="text" /></td>
+										<td><strong>mi</strong> mile</td>
+								</tr>
+								<tr>
+										<td><input id="km" name="km" type="text" /></td>
+										<td><strong>km</strong> kilometer</td>
+										
+										<td></td>
+										<td>&nbsp;</td>
+								</tr>
+							</tbody>
+							
+						</table>
+					</div>
+					<button class="reset" type="reset" value="reset" />reset</button>
+				</form>
+			<!-- length -->
+			</section>
+			<section id="mass">
+				<form id="convMass">
+					<div class="formTable">
+						<table>
+							
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+								
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>
+							<thead colspan="4">Metric</thead>
+							<tbody>
+								<tr>
+									<td><input id="mg" name="mg" type="text" /></td>
+									<td><strong>mg</strong> milligram</td>
+									
+									<td><input id="g" name="g" type="text" /></td>
+									<td><strong>g</strong> gram</td>
+								</tr>
+								<tr>
+									<td><input id="kg" name="kg" type="text" /></td>
+									<td><strong>kg</strong> kilogram</td>
+									
+									<td><input id="tn" name="tn" type="text" /></td>
+									<td><strong>tonne</strong></td>
+								</tr>
+								<tr>
+									<td><input id="n" name="n" type="text" /></td>
+									<td><strong>N</strong> newton</td>
+									
+									<td><input id="cd" name="cd" type="text" /></td>
+									<td><strong>CD</strong> metric carat</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="formTable">
+						<table>
+							<thead>Avoirdupois (US/British)</thead>
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+								
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>	
+								<tbody>
+								<!-- FOO -->
+								<tr>
+																
+										<td><input id="oz" name="oz" type="text" /></td>
+										<td><strong>oz</strong> ounce</td>
+								</tr>
+								<tr>
+										
+										
+										
+										<td><input id="lb" name="lb" type="text" /></td>
+										<td><strong>lb</strong> pound</td>
+								</tr>
+								<tr>
+										
+										
+										
+										<td><input id="sTon" name="sTon" type="text" /></td>
+										<td><strong>ton</strong> short ton (US)</td>
+								</tr>
+								<tr>
+										
+										
+										
+										<td><input id="lTon" name="lTon" type="text" /></td>
+										<td><strong>ton</strong> long ton (UK)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="reset" type="reset" value="reset" />reset</button>
+				</form>
+			<!-- mass -->
+			</section>
+			<section id="volume">
+				<form id="convVolume">
+					<div class="formTable">
+						<table>
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+								
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>
+							<thead colspan="4">Metric</thead>
+							<tbody>
+								<tr>
+									<td><input id="ul" name="ul" type="text" /></td>
+									<td><strong>&micro;l</strong> microliter</td>
+									
+									<td><input id="ml" name="ml" type="text" /></td>
+									<td><strong>ml</strong> milliliter</td>
+								</tr>
+								<tr>
+									<td><input id="cl" name="cl" type="text" /></td>
+									<td><strong>cl</strong> centiliter</td>
+									
+									<td><input id="dl" name="dl" type="text" /></td>
+									<td><strong>dl</strong> deciliter</td>
+								</tr>
+								<tr>
+									<td><input id="l" name="l" type="text" /></td>
+									<td><strong>l</strong> liter</td>
+									
+									<td><input id="hl" name="hl" type="text" /></td>
+									<td><strong>hl</strong> hectoliter</td>
+								</tr>
+								<tr>
+									<td><input id="m3" name="m3" type="text" /></td>
+									<td><strong>m<sup>3</sup></strong> cubic meter</td>
+									
+									<td><input id="dm3" name="dm3" type="text" /></td>
+									<td><strong>dm<sup>3</sup></strong> cubic decimeter</td>
+								</tr>
+								<tr>
+									<td><input id="cc" name="cc" type="text" /></td>
+									<td><strong>cc</strong> cubic centimeter</td>
+									
+									<td><input id="mm3" name="mm3" type="text" /></td>
+									<td><strong>mm<sup>3</sup></strong> cubic millimeter</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="formTable">
+						<table>
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+								
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>
+							<thead colspan="4">US Liquid Measure</thead>
+							<tbody>
+								<tr>
+									<td><input id="gal" name="gal" type="text" /></td>
+									<td><strong>gal</strong> gallon</td>
+									
+									<td><input id="qt" name="qt" type="text" /></td>
+									<td><strong>qt</strong> quart</td>
+								</tr>
+								<tr>
+									<td><input id="pt" name="pt" type="text" /></td>
+									<td><strong>pt</strong> pint</td>
+									
+									<td><input id="floz" name="floz" type="text" /></td>
+									<td><strong>fl. oz</strong> fluid ounce</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="formTable">
+						<table>
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+								
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>
+							<thead colspan="4">US Dry Measure</thead>
+							<tbody>
+								<tr>
+									<td><input id="gal" name="gal" type="text" /></td>
+									<td><strong>gal</strong> gallon</td>
+									
+									<td><input id="qt" name="qt" type="text" /></td>
+									<td><strong>qt</strong> quart</td>
+								</tr>
+								<tr>
+									<td><input id="pt" name="pt" type="text" /></td>
+									<td><strong>pt</strong> pint</td>
+									
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="reset" type="reset" value="reset" />reset</button>
+				</form>
+			</section>
+		</div>
+	<!-- #conversion -->
+	</section>
+	<section id="geometry">
+		<nav class="subMenu">
+			<ul>
+				<li><a name="shapes" class="active">Shapes</a></li>
+				<li><a name="angles">Angles</a></li>
+				<li><a name="somethingelse">Something Else</a></li>
+			</ul>
+		</nav>
+		<div class="info">
+			<section id="shapes">
+				<h1>Shapes</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+			</section>
+			<section id="angles">
+				<h1>angles</h1>
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+			</section>
+			<section id="somethingelse">
+				<h1>Something else</h1>
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+			</section>
+		</div>
+	<!-- #geometry -->
+	</section>
+	<section id="electronics">
+		<div class="subMenu">
+			<ul>
+				<li><a name="basic" class="active">Basic Circuits</a></li>
+				<li><a name="opamps">Op Amps &amp; Transistors</a></li>
+				<li><a name="other">Something Else</a></li>
+			</ul>
+		</div>
+		<div class="info">
+			<section id="basic">
+				<h1>Basic Circuits</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+			</section>
+			<section id="opamps">
+				<h1>Op Amps and Transistors</h1>
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+			</section>
+			<section id="other">
+				<h1>Somthing Else</h1>
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+			</section>
+		</div>
+	<!-- #electronics -->
+	</section>
+	<section id="ham">
+		<div class="subMenu">
+			<ul>
+				<li><a name="shapes" class="active">Shapes</a></li>
+				<li><a name="angles">Angles</a></li>
+				<li><a name="more">Something Else</a></li>
+			</ul>
+		</div>
+		<div class="info">
+			<section id="shapes">
+				<h1>Shapes</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+			</section>
+			<section id="angles">
+				<h1>Angles</h1>
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+			</section>
+			<section id="more">
+				<h1>Something Else</h1>
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+			</section>
+		</div>
+	<!-- #ham -->
+	</section>
+	<section id="shop">
+		<div class="subMenu">
+			<ul>
+				<li><a name="shapes" class="active">Shapes</a></li>
+				<li><a name="angles">Angles</a></li>
+				<li><a name="Something">Something Else</a></li>
+			</ul>
+		</div>
+		<div class="info">
+			<section id="shapes">
+				<h1>Length</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+			</section>
+			<section id="angles">
+				<h1>Mass</h1>
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu hendrerit nisi. Suspendisse ut magna eu massa consequat cursus. Integer purus elit, gravida nec fermentum ut, facilisis quis felis. Vestibulum euismod elementum mi aliquet pretium. Praesent eleifend ipsum vitae elit elementum ultrices dignissim quis urna. Quisque euismod varius nibh quis consectetur. Aliquam fermentum sodales ultrices. Proin scelerisque venenatis enim eu semper. Phasellus pharetra scelerisque porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus elit egestas turpis tempor scelerisque. Curabitur quis quam neque. Nulla quis metus ligula, id euismod neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in est ut mi dapibus placerat. Cras vitae neque nec libero tincidunt aliquam fringilla in sapien. Ut vitae hendrerit metus.</p> 
+				<p>In hac habitasse platea dictumst. Ut eget dolor sapien. Curabitur mollis metus ut nibh porta ac aliquet eros interdum. Nam et congue mauris. Morbi aliquam diam ac dui pharetra non posuere magna varius. Curabitur tincidunt, lorem a tempus facilisis, magna mi tempor nisl, non feugiat erat purus vitae mi. Nunc orci nunc, condimentum sed gravida ut, tincidunt nec tortor. Suspendisse rhoncus ligula in lorem ultrices sit amet vehicula nulla cursus. Maecenas quis leo vitae lacus accumsan iaculis sed sit amet sapien. Praesent leo nulla, fringilla non facilisis sit amet, consequat vel purus. Duis nec ligula turpis. Praesent porttitor porttitor tellus, in rhoncus risus consectetur sed. Quisque imperdiet dapibus augue, quis sodales nulla commodo id. Morbi venenatis convallis urna nec viverra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eu magna arcu, ac tempor velit. Ut lobortis convallis lacus vel ullamcorper.</p> 
+			</section>
+			<section id="Something">
+				<h1>Volume</h1>
+				<p>In hac habitasse platea dictumst. Aliquam sit amet massa quis odio cursus hendrerit. Vivamus scelerisque nunc eget massa molestie eu adipiscing augue porta. Quisque tincidunt tempor accumsan. Donec elementum aliquet ante et cursus. Pellentesque adipiscing velit in nisl dapibus vel imperdiet sapien fermentum. Suspendisse potenti. Fusce eu metus a lectus aliquet porta in ullamcorper nulla. Aenean pulvinar turpis id enim suscipit quis venenatis leo adipiscing. Aliquam lacus turpis, sollicitudin vitae lobortis semper, rutrum in eros. Curabitur bibendum ullamcorper congue. Praesent placerat, erat et consequat malesuada, lacus dui condimentum urna, in adipiscing dui erat in nisi. Ut ut magna eu magna euismod sollicitudin. Quisque placerat nisi nunc, viverra sagittis sapien.</p> 
+				<p>Proin ac lectus urna, sit amet lacinia diam. Integer mollis convallis lectus, et sollicitudin justo malesuada quis. Etiam molestie ligula ut elit lacinia hendrerit. Curabitur rutrum lorem id mi ullamcorper eleifend. Donec a metus elementum sem iaculis sagittis at ut elit. Phasellus sit amet orci at dolor dignissim vehicula vel nec ante. Curabitur turpis eros, accumsan vitae semper nec, porttitor sit amet leo. Donec feugiat nibh quis nisl malesuada posuere. Suspendisse potenti. Maecenas volutpat turpis quis dui mattis quis faucibus dolor pellentesque. Nam semper tincidunt leo in iaculis. Pellentesque lacus tortor, aliquam ullamcorper tristique vitae, pellentesque eu lectus. Fusce elementum leo non justo mattis sit amet fermentum massa luctus. Donec bibendum tincidunt magna, id euismod dolor viverra blandit. Donec bibendum lacinia nibh id consequat. Integer congue elementum nisi, a varius mi hendrerit a.</p> 
+				<p>Donec felis mauris, sollicitudin eu euismod sit amet, posuere et quam. Vivamus in est purus. Curabitur pellentesque tempus massa, in ultrices metus posuere ut. Aliquam diam lorem, placerat faucibus porta nec, eleifend vitae enim. Suspendisse potenti. Donec dui lacus, pulvinar ut viverra in, scelerisque vel tortor. Maecenas vitae risus leo, in ullamcorper quam. Duis lacus nunc, elementum at eleifend id, convallis at lorem. Pellentesque sit amet sollicitudin leo. In hac habitasse platea dictumst. Integer rutrum aliquet quam in laoreet.</p>
+			</section>
+		</div>
+	<!-- #shop -->
+	</section>
+<!-- #content -->
+</div>
+<div id="content-bottom"></div>
+
+<div class="clear"></div>
+<div style="margin: 20px auto; text-align: center;">
+	<p>Created &amp; Designed by Nathanael Phillips (http://labs.coffeebot.net) with assistance from the fine folks at <a href="http://www.heatsynclabs.org">HeatSync Labs</a></p>
+	<p>All code and content is Public Domain, unless otherwise specified. Download a copy of the site for off-line use.</p>
+	
+</div>
+<script> 
+
+$(document).ready(function () {
+		
+	$('#imageCalc').calculator({showOn: 'button', buttonImageOnly: true, buttonImage: 'img/calculator.png', layout: $.calculator.scientificLayout, onClose: useValue});
+	
+	function useValue(value, inst) { 
+		//alert('The calculated value is ' + value); 
+	} 
+	
+	$('#inlineDisable').toggle(function() { 
+	    $(this).text('Enable'); 
+	    $('#inlineCalc').calculator('disable'); 
+	}, function() { 
+	    $(this).text('Disable'); 
+	    $('#inlineCalc').calculator('enable'); 
+	});
+		
+	//$("#mainMenu ul").tabs("#content > div");	
+	$("#mainMenu a").click( function() {
+		if($(this).hasClass('active')) {
+			//do nothing
+		} else {
+			//alert( $(this).attr('name'));
+			$("#mainMenu a").removeClass('active');
+			$(this).addClass('active');
+	
+			var hgt = $("#content section#"+$(this).attr('name')).height() + 20;
+			
+			$("#content").animate( {
+				height: hgt+"px" },
+				500
+				);
+			$("#content > section[id!='subMenuBG']").fadeOut(250).delay(251);
+			$("#content section#"+$(this).attr('name')).fadeIn(150);
+		}
+
+	});
+	
+	
+	$(".subMenu a").click( function() {
+		if($(this).hasClass('active')) {
+			//do nothing
+		} else {
+			$(this).parents().eq(3).find(".subMenu a").removeClass('active');
+			$(this).addClass('active');
+			var hgt = $("section#"+$(this).attr('name')).height() + 50;
+			
+			$("#content").animate( {
+				height: hgt+"px" },
+				500
+				);
+			$(".info > section").fadeOut(250).delay(251);
+			$("section#"+$(this).attr('name')).fadeIn(150);
+		}
+	});
+	
+	$("form#convLength input").change( function() {
+		$(this).convertLength($(this).val(), $(this).get(0).id, $('input#precision').val());
+		$(this).focus();
+		$(this).select();
+	});
+	$("form#convMass input").change( function() {
+		$(this).convertMass($(this).val(), $(this).get(0).id, $('input#precision').val());
+		$(this).focus();
+		$(this).select();
+	});
+	
+	
+	
+});
+
+</script> 
+</body> 
+ 
+</html> 

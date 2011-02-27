@@ -1,0 +1,116 @@
+@import "jquery.calculator.css";
+
+
+body {
+	background: #e9e8e8;
+	font-family: "PT Sans", "Arial", "Helvetica", "Gill Sans", "Lucida Grande", "Verdana", sans-serif; font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+#titleBar {
+  height: 85px;
+  background: #514a4a url('../img/bg2.gif');
+  padding: 20px;
+}
+
+#title {
+	width: 55%;
+	float: left;
+	margin-bottom: 20px;	
+}
+#calc {
+	width: 40%;
+	padding: 1px;
+	float: right;	
+	text-align: right;
+	margin-right: -10px;
+}
+h1 {
+	font-family: "Liberation Serif", "Times New Roman", "Georgia", "Palatino", "Baskerville", "Hoefler Text", serif; font-size: 36px;
+	color: #1a1a1a;
+	text-shadow: 1px 1px 0 #605d5c;
+}
+
+h2 {
+	font-family: "Liberation Serif", "Times New Roman", "Georgia", "Palatino", "Baskerville", "Hoefler Text", serif; font-size: 24px;
+	color: #6f6f6a;
+	text-shadow: 1px 1px 0 #f4f3f2;
+	margin-bottom: 10px;
+}
+
+.hasCalculator {
+	border-radius: 5px;
+	color: #ccc;
+	font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif; font-size: 22px;
+	border: 1px solid #1a1a1a;
+	background-color: #1a1a1a;
+	-moz-box-shadow: 1px 1px 0 #605d5c;
+	-webkit-box-shadow: 1px 1px 0 #605d5c;
+	box-shadow: 1px 1px 0 #605d5c;
+	text-align: right;
+}
+img.calculator-trigger {
+	vertical-align: top;
+}
+
+ul.css-tabs {  
+	margin:0 !important; 
+	padding:0 0 0 20px;
+	height:50px;
+	border-bottom:1px solid #666;	 	
+}
+
+/* single tab */
+ul.css-tabs li {  
+	float:left;	 
+	padding:0; 
+	margin:0;  
+	list-style-type:none;	
+}
+
+/* link inside the tab. uses a background image */
+ul.css-tabs a { 
+	float:left;
+	font-size:24px;
+	display:block;
+	padding:10px 30px;	
+	text-decoration:none;
+	border:1px solid #666;	
+	border-bottom:0px;
+	height:28px;
+	background-color:#efefef;
+	color:#777;
+	margin-right:2px;
+	position:relative;
+	top:1px;	
+	outline:0;
+	-moz-border-radius:4px 4px 0 0;	
+}
+
+ul.css-tabs a:hover {
+	background-color:#F7F7F7;
+	color:#333;
+}
+	
+/* selected tab */
+ul.css-tabs a.current {
+	background-color:#ddd;
+	border-bottom:1px solid #ddd;	
+	color:#000;	
+	cursor:default;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  background: #e9e8e8;
+}

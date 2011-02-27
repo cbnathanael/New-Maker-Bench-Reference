@@ -1,0 +1,16 @@
+Conversion
+	Length/Distance
+	Weight/Mass
+	Area
+	Volume/Capacity
+	Temperature
+	Angle
+	Time
+	Velocity, Angular Velocity
+	Acceleration, Angular Accel
+	Density
+	Force
+	Pressure
+	Power
+	Energy/Work
+	Torque

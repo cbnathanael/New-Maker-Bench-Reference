@@ -1,0 +1,194 @@
+@import "jquery.calculator.css";
+
+body {
+	background: #514a4a url('../img/bg.gif');
+	font-family: "PT Sans", "Arial", "Helvetica", "Gill Sans", "Lucida Grande", "Verdana", sans-serif; font-size: 14px;
+	line-height: 21px;
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin-bottom: 11px;
+	
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+#title {
+	width: 70%;
+	float: left;
+	padding-left: 20px;
+	line-height: 90px;	
+}
+#calc {
+	width: 25%;
+	float: right;	
+	text-align: right;
+	padding-right: 20px;
+}
+h1 {
+	font-family: "Liberation Serif", "Times New Roman", "Georgia", "Palatino", "Baskerville", "Hoefler Text", serif; font-size: 36px;
+	color: #1a1a1a;
+	text-shadow: 1px 1px 0 #605d5c;
+	
+}
+
+
+h2 {
+	font-family: "Liberation Serif", "Times New Roman", "Georgia", "Palatino", "Baskerville", "Hoefler Text", serif; font-size: 24px;
+	color: #6f6f6a;
+	text-shadow: 1px 1px 0 #f4f3f2;
+	margin-bottom: 10px;
+}
+#calc {
+	margin-top: 14px;
+}
+#calc input {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #ccc;
+	font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif; font-size: 22px;
+	border: 1px solid #1a1a1a;
+	background-color: #1a1a1a;
+	-moz-box-shadow: 1px 1px 0 #605d5c;
+	-webkit-box-shadow: 1px 1px 0 #605d5c;
+	box-shadow: 1px 1px 0 #605d5c;
+	text-align: right;
+}
+#calc img  {
+	vertical-align: middle;
+	margin-top: -9px;
+}
+
+#mainMenu {
+	margin: 0;
+	padding: 0 20px;
+	background: url('../img/menu_bg.gif') top left repeat-x;
+	height: 50px;
+	line-height: 50px;
+}
+
+#mainMenu li {
+	float: left;
+	margin-right: 20px;
+}
+
+#mainMenu a {
+	display: block;
+	position: relative;
+	font-size: 24px;
+	padding: 0 20px;
+	margin-left: -20px;
+	color: #0d142c;
+	text-shadow: 1px 1px 0 #3c55a6;
+	text-decoration: none;
+	cursor: pointer;
+}
+#mainMenu li a:hover {
+	background: url('../img/menu_bg_highlight.gif') top left repeat-x;
+	color: #182339;
+	text-shadow: 1px 1px 0 #6d9bdf;
+}
+#mainMenu li a.active {
+	background: url('../img/menu_bg_active.gif') top left repeat-x;
+	color: #303632;
+	text-shadow: 1px 1px 0 #adcdc0;
+}
+
+#content {
+	background:#e9e8e8;
+	width:100%;	
+	overflow: hidden;
+	position:relative;
+}
+
+#content > section {
+	padding: 20px;
+	display: none;
+}
+#content section#conversion {
+	display: block;
+
+}
+#content-top, #content-bottom {
+	width: 100%;
+	height: 10px;
+	background: url('../img/content_shadow_top.png') top left repeat-x;
+}
+#content-bottom {
+	background: url('../img/content_shadow_bottom.png') bottom left repeat-x;
+}
+
+#subMenuBG {
+	background: #B0CDC1;
+	height: 30px;
+	width: 100%;
+	display: block !important;
+	padding: 0 20px !important;
+	margin: 0 0 -30px 0;
+}
+
+.subMenu {
+	margin: -20px -20px 10px -20px;
+	padding: 0 0 0 10px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+.subMenu li {
+	float: left;
+}
+.subMenu a {
+	display: block;
+	position: relative;
+	font-size: 18px;
+	padding: 0 10px;
+	cursor: pointer;
+}
+.subMenu a:hover {
+	
+}
+.subMenu a.active {
+	font-weight: bold;	
+	cursor: text;
+}
+.info > section {
+	display: none;
+}
+#conversion .info section#length, #geometry .info section#shapes, #electronics .info section#basic {
+	display: block;
+}
+input, button {
+	border: 1px solid #515050;
+	font-family: "Ubuntu", "Lucida Grande", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif; font-size: 18px;
+	width: 100px;
+	line-height: 20px;
+	text-align: right;
+}
+button.reset {
+	text-align: center;
+	width: 55px; 
+	height: 30px;
+}
+form#convLength input {
+	text-align: right;
+}
+
+.formTable {
+	float: left;
+	margin-right: 10px;
+	border: 1px solid white;
+	padding: 5px;
+	
+}
+
+table td {
+	padding: 5px;
+}
