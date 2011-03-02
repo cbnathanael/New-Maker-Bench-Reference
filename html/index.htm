@@ -258,17 +258,17 @@
 								<col class="columnRight1" />
 								<col class="columnRight2" />
 							</colgroup>
-							<thead colspan="4">US Liquid Measure</thead>
+							<thead colspan="4">US Liquid</thead>
 							<tbody>
 								<tr>
-									<td><input id="gal" name="gal" type="text" /></td>
+									<td><input id="lgal" name="lgal" type="text" /></td>
 									<td><strong>gal</strong> gallon</td>
 									
-									<td><input id="qt" name="qt" type="text" /></td>
+									<td><input id="lqt" name="lqt" type="text" /></td>
 									<td><strong>qt</strong> quart</td>
 								</tr>
 								<tr>
-									<td><input id="pt" name="pt" type="text" /></td>
+									<td><input id="lpt" name="lpt" type="text" /></td>
 									<td><strong>pt</strong> pint</td>
 									
 									<td><input id="floz" name="floz" type="text" /></td>
@@ -286,17 +286,17 @@
 								<col class="columnRight1" />
 								<col class="columnRight2" />
 							</colgroup>
-							<thead colspan="4">US Dry Measure</thead>
+							<thead colspan="4">US Dry</thead>
 							<tbody>
 								<tr>
-									<td><input id="gal" name="gal" type="text" /></td>
+									<td><input id="dgal" name="dgal" type="text" /></td>
 									<td><strong>gal</strong> gallon</td>
 									
-									<td><input id="qt" name="qt" type="text" /></td>
+									<td><input id="dqt" name="dqt" type="text" /></td>
 									<td><strong>qt</strong> quart</td>
 								</tr>
 								<tr>
-									<td><input id="pt" name="pt" type="text" /></td>
+									<td><input id="dpt" name="dpt" type="text" /></td>
 									<td><strong>pt</strong> pint</td>
 									
 									<td>&nbsp;</td>
@@ -512,7 +512,11 @@ $(document).ready(function () {
 		$(this).focus();
 		$(this).select();
 	});
-	
+	$("form#convVolume input").change( function() {
+		$(this).convertVolume($(this).val(), $(this).get(0).id, $('input#precision').val());
+		$(this).focus();
+		$(this).select();
+	});
 	
 	
 });

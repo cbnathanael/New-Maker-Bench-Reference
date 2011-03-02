@@ -110,3 +110,81 @@ $.fn.convertMass = function(len, unit, precision) {
 	
 	return base;
 }
+
+$.fn.convertVolume = function(len, unit, precision) {
+	
+	var base;
+	switch(unit) {
+		case 'ul':
+			base = len * 1e-6;
+			break;
+		case 'ml':
+			base = len * 1e-3;
+			break;
+		case 'cl':
+			base = len * 1e-2;
+			break;
+		case 'dl':
+			base = len * 1e-1;
+			break;
+		case 'l':
+			base = len * 1;
+			break;
+		case 'hl':
+			base = len * 1e2;
+			break;
+		case 'm3':
+			base = len * 1e3;
+			break;
+		case 'dm3':
+			base = len * 1;
+			break;
+		case 'cc':
+			base = len * 1e-3;
+			break;
+		case 'mm3':
+			base = len * 1e-6;
+			break;
+		case 'lgal':
+			base = len * 3.875;
+			break;
+		case 'lqt':
+			base = len * 0.9464;
+			break;
+		case 'lpt':
+			base = len * 0.4732;
+			break;
+		case 'floz':
+			base = len * 0.02957;
+			break;
+		case 'dgal':
+			base = len * 4.405;
+			break;
+		case 'dqt':
+			base = len * 1.101;
+			break;
+		case 'dpt':
+			base = len * 0.5506;
+			break;
+	}
+	
+	$("form#convVolume input#ul").val( (base/1e-6).toPrecision(precision) );
+	$("form#convVolume input#ml").val( (base/1e-3).toPrecision(precision) );
+	$("form#convVolume input#cl").val( (base/1e-2).toPrecision(precision) );
+	$("form#convVolume input#dl").val( (base/1e-1).toPrecision(precision) );
+	$("form#convVolume input#l").val( (base/1).toPrecision(precision) );
+	$("form#convVolume input#hl").val( (base/1e2).toPrecision(precision) );
+	$("form#convVolume input#m3").val( (base/1e3).toPrecision(precision) );
+	$("form#convVolume input#dm3").val( (base/1).toPrecision(precision) );
+	$("form#convVolume input#cc").val( (base/1e-3).toPrecision(precision) );
+	$("form#convVolume input#mm3").val( (base/1e-6).toPrecision(precision) );
+	$("form#convVolume input#lgal").val( (base/3.875).toPrecision(precision) );
+	$("form#convVolume input#lqt").val( (base/0.9464).toPrecision(precision) );
+	$("form#convVolume input#lpt").val( (base/0.4732).toPrecision(precision) );
+	$("form#convVolume input#floz").val( (base/0.02957).toPrecision(precision) );
+	$("form#convVolume input#dgal").val( (base/4.405).toPrecision(precision) );
+	$("form#convVolume input#dqt").val( (base/1.101).toPrecision(precision) );
+	$("form#convVolume input#dpt").val( (base/0.5506).toPrecision(precision) );
+	
+	return base;
+}

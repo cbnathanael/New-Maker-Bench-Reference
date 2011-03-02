@@ -176,6 +176,7 @@ button.reset {
 	text-align: center;
 	width: 55px; 
 	height: 30px;
+	margin: 5px;
 }
 form#convLength input {
 	text-align: right;
@@ -183,7 +184,7 @@ form#convLength input {
 
 .formTable {
 	float: left;
-	margin-right: 10px;
+	margin: 5px;
 	border: 1px solid white;
 	padding: 5px;
 	
