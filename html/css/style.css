@@ -11,6 +11,10 @@ p {
 	margin-bottom: 11px;
 	
 }
+sup {
+vertical-align: super;
+font-size: smaller; }
+
 .clear {
 	clear: both;
 	display: block;
@@ -19,6 +23,7 @@ p {
 	width: 0;
 	height: 0;
 }
+
 
 #title {
 	width: 70%;
