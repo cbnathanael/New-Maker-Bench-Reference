@@ -214,3 +214,36 @@ $.fn.convertSpeed = function(len, unit, precision) {
 	
 	return base;
 }
+$.fn.convertTime = function(len, unit, precision) {
+	
+	var base;
+	switch(unit) {
+		case 'Time-ms':
+			base = len * 1e-3;
+			break;
+		case 'Time-s':
+			base = len;
+			break;
+		case 'Time-min':
+			base = len * 60;
+			break;
+		case 'Time-hour':
+			base = len * 3600;
+			break;
+		case 'Time-day':
+			base = len * 86400;
+			break;
+		case 'Time-year':
+			base = len * 31557600;
+			break;
+	}
+	
+	$("form#convTime input#Time-ms").val( (base/1e-3).toPrecision(precision) );
+	$("form#convTime input#Time-s").val( (base/1).toPrecision(precision) );
+	$("form#convTime input#Time-min").val( (base/60).toPrecision(precision) );
+	$("form#convTime input#Time-hour").val( (base/3600).toPrecision(precision) );
+	$("form#convTime input#Time-day").val( (base/86400).toPrecision(precision) );
+	$("form#convTime input#Time-year").val( (base/31557600).toPrecision(precision) );
+	
+	return base;
+}

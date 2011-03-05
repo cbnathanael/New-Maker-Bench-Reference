@@ -44,6 +44,7 @@
 				<li><a name="mass">Mass/Weight</a></li>
 				<li><a name="volume">Volume</a></li>
 				<li><a name="speed">Speed</a></li>
+				<li><a name="time">Time</a></li>
 			</ul>
 		</nav>
 		<div class="info">
@@ -341,6 +342,45 @@
 					<button class="reset" type="reset" value="reset" />reset</button>
 				</form>
 			</section>
+			<section id="time">
+			<form id="convTime">
+					<div class="formTable">
+						<table>
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+								
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td><input id="Time-ms" name="Time-ms" type="text" /></td>
+									<td><strong>ms</strong> millisecond</td>
+									
+									<td><input id="Time-s" name="Time-s" type="text" /></td>
+									<td><strong>s</strong> second</td>
+								</tr>
+								<tr>
+									<td><input id="Time-min" name="Time-min" type="text" /></td>
+									<td><strong>min</strong> minute</td>
+									
+									<td><input id="Time-hour" name="Time-hour" type="text" /></td>
+									<td><strong>h</strong> hour</td>
+								</tr>
+								<tr>
+									<td><input id="Time-day" name="Time-day" type="text" /></td>
+									<td><strong>d</strong> day</td>
+									
+									<td><input id="Time-year" name="Time-year" type="text" /></td>
+									<td><strong>yr</strong> year</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="reset" type="reset" value="reset" />reset</button>
+				</form>
+			</section>
 		</div>
 	<!-- #conversion -->
 	</section>
@@ -552,6 +592,11 @@ $(document).ready(function () {
 	});
 	$("form#convSpeed input").change( function() {
 		$(this).convertSpeed($(this).val(), $(this).get(0).id, $('input#precision').val());
+		$(this).focus();
+		$(this).select();
+	});
+	$("form#convTime input").change( function() {
+		$(this).convertTime($(this).val(), $(this).get(0).id, $('input#precision').val());
 		$(this).focus();
 		$(this).select();
 	});
