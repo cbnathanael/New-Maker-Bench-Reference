@@ -43,6 +43,7 @@
 				<li><a name="length" class="active">Length</a></li>
 				<li><a name="mass">Mass/Weight</a></li>
 				<li><a name="volume">Volume</a></li>
+				<li><a name="speed">Speed</a></li>
 			</ul>
 		</nav>
 		<div class="info">
@@ -308,6 +309,38 @@
 					<button class="reset" type="reset" value="reset" />reset</button>
 				</form>
 			</section>
+			<section id="speed">
+			<form id="convSpeed">
+					<div class="formTable">
+						<table>
+							<colgroup>
+								<col class="columnLeft1" />
+								<col class="columnLeft2" />
+								
+								<col class="columnRight1" />
+								<col class="columnRight2" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td><input id="ms" name="ms" type="text" /></td>
+									<td><strong>m/s</strong> meter per second</td>
+									
+									<td><input id="kms" name="kms" type="text" /></td>
+									<td><strong>km/s</strong> kilometer per second</td>
+								</tr>
+								<tr>
+									<td><input id="fs" name="fs" type="text" /></td>
+									<td><strong>f/s</strong> foot per second</td>
+									
+									<td><input id="mph" name="mph" type="text" /></td>
+									<td><strong>mph</strong> mile per hour</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="reset" type="reset" value="reset" />reset</button>
+				</form>
+			</section>
 		</div>
 	<!-- #conversion -->
 	</section>
@@ -514,6 +547,11 @@ $(document).ready(function () {
 	});
 	$("form#convVolume input").change( function() {
 		$(this).convertVolume($(this).val(), $(this).get(0).id, $('input#precision').val());
+		$(this).focus();
+		$(this).select();
+	});
+	$("form#convSpeed input").change( function() {
+		$(this).convertSpeed($(this).val(), $(this).get(0).id, $('input#precision').val());
 		$(this).focus();
 		$(this).select();
 	});

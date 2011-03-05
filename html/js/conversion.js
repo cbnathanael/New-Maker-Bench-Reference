@@ -188,3 +188,29 @@ $.fn.convertVolume = function(len, unit, precision) {
 	
 	return base;
 }
+
+$.fn.convertSpeed = function(len, unit, precision) {
+	
+	var base;
+	switch(unit) {
+		case 'ms':
+			base = len;
+			break;
+		case 'kms':
+			base = len * 1000;
+			break;
+		case 'fs':
+			base = len * 0.3048;
+			break;
+		case 'mph':
+			base = len * 0.447;
+			break;
+	}
+	
+	$("form#convSpeed input#ms").val( (base/1).toPrecision(precision) );
+	$("form#convSpeed input#kms").val( (base/1000).toPrecision(precision) );
+	$("form#convSpeed input#fs").val( (base/0.3048).toPrecision(precision) );
+	$("form#convSpeed input#mph").val( (base/0.447).toPrecision(precision) );
+	
+	return base;
+}
